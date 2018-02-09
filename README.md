@@ -6,7 +6,7 @@
     
 <h4>or</h4>
 
-    npm install
+    npm i
     
     
 <h3>Run project</h3>
