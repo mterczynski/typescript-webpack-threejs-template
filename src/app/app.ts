@@ -12,7 +12,7 @@ export class App {
   private brick: Brick;
 
   constructor() {
-    this.brick = new Brick(100, new Color('rgb(0,0,0)'));
+    this.brick = new Brick(100, new Color('rgb(255,0,0)'));
     this.scene.add(this.brick);
 
     this.camera.position.set(200, 200, 200);
