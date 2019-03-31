@@ -1,22 +1,20 @@
 {
-  "name": "34_webpack_threejs",
+  "name": "typescript-webpack-threejs-template",
   "version": "1.0.0",
-  "description": "",
   "main": "app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@types/three": "^0.84.22",
-    "three": "^0.87.1",
-    "ts-loader": "^2.3.7",
-    "typescript": "^2.6.2"
+    "@types/three": "^0.93.30",
+    "three": "^0.103.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.1",
+    "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   }
 }
