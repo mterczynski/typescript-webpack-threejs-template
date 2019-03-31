@@ -16,7 +16,7 @@ export class App {
     this.scene.add(this.brick);
 
     this.camera.position.set(200, 200, 200);
-    this.camera.lookAt({ x: 0, y: 0, z: 0 } as Vector3);
+    this.camera.lookAt(new Vector3(0, 0, 0));
 
     this.renderer.setSize(innerWidth, innerHeight);
     this.renderer.setClearColor(new Color('rgb(0,0,0)'));
