@@ -8,7 +8,7 @@ export class App {
 
     this.camera.position.set(200, 200, 200);
     this.renderer.setSize(innerWidth, innerHeight);
-    this.renderer.setClearColor(new THREE.Color("rgb(200,0,0)"));
+    this.renderer.setClearColor(new THREE.Color("rgb(0,0,0)"));
     this.camera.lookAt(<THREE.Vector3>{ x: 0, y: 0, z: 0 });
 
     this.render();
