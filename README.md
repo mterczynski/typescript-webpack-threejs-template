@@ -1,18 +1,13 @@
-# typescript-webpack-threejs-template
+# TS + Webpack + three.js template
 
-<h3>Install dependencies:</h3>
+## Install dependencies
 
     yarn
-    
-<h4>or</h4>
 
-    npm i
-    
-    
-<h3>Run project</h3>
+## Run project
 
-    npm start
-    
-<h3>Compile code to bundle</h3>
+    yarn start
+
+## Compile code to bundle
 
     webpack
