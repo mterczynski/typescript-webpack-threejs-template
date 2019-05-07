@@ -32,7 +32,7 @@ export class App {
 
   private render() {
     this.renderer.render(this.scene, this.camera);
-    requestAnimationFrame(() => { this.render(); });
+    requestAnimationFrame(() => this.render());
 
     this.adjustCanvasSize();
     this.brick.rotateY(0.03);
