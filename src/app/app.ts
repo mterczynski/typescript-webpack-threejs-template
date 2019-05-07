@@ -1,5 +1,5 @@
 import { Color, PerspectiveCamera, Scene, Vector3, WebGLRenderer } from 'three';
-import { Brick } from './Brick';
+import { Brick } from './brick';
 
 export class App {
   private readonly scene = new Scene();
