@@ -4,10 +4,14 @@
 
     yarn
 
-## Run project
+## Run project in watch mode
 
     yarn start
 
-## Compile code to bundle
+## Build project (for development)
 
-    webpack
+    yarn build
+
+## Build project (for production)
+
+    yarn build:prod
