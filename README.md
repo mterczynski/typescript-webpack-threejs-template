@@ -1,4 +1,4 @@
-# TS + Webpack + Three.js template
+# TypeScript + Webpack + Three.js template
 
 ## Install dependencies
 
