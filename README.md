@@ -1,5 +1,7 @@
 # TypeScript + Webpack + Three.js template
 
+![Build Status](https://travis-ci.org/mterczynski/typescript-webpack-threejs-template.svg?branch=master)
+
 ## Install dependencies
 
     yarn
