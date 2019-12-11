@@ -4,8 +4,7 @@
   "main": "app.ts",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack",
-    "build:prod": "webpack --mode=production"
+    "build": "webpack --mode=production"
   },
   "dependencies": {
     "three": "^0.107.0",

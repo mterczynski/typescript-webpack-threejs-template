@@ -10,10 +10,7 @@
 
     yarn start
 
-## Build project (for development)
+## Build project
 
     yarn build
 
-## Build project (for production)
-
-    yarn build:prod
