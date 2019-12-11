@@ -9,4 +9,3 @@ branches:
   - master
 script:
   - yarn build
-  - yarn build:prod
