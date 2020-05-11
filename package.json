@@ -7,14 +7,14 @@
     "build": "webpack --mode=production"
   },
   "dependencies": {
-    "three": "~0.114.0"
+    "three": "~0.116.1"
   },
   "devDependencies": {
-    "ts-loader": "^6.2.1",
-    "tslint": "^6.1.0",
+    "ts-loader": "^7.0.3",
+    "tslint": "^6.1.2",
     "typescript": "^3.8.3",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack": "^4.42.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack": "^4.43.0"
   }
 }
