@@ -3,7 +3,9 @@ const path = require('path')
 module.exports = {
   mode: 'development',
   entry: './src/main.ts',
-
+  devServer: {
+    port: 9000,
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
