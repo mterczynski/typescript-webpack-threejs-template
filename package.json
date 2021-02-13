@@ -4,6 +4,7 @@
   "scripts": {
     "start": "webpack serve",
     "start:open": "webpack serve --open",
+    "lint": "tslint --project . --fix",
     "build": "webpack --mode=production"
   },
   "dependencies": {
