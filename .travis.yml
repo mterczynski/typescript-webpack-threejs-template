@@ -3,7 +3,7 @@ language: node_js
 install:
   - npm install
 node_js:
-  - 12
+  - 14
 branches:
   only:
   - master
