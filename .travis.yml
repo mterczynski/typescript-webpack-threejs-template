@@ -1,11 +1,11 @@
 language: node_js
 
 install:
-  - yarn
+  - npm install
 node_js:
   - 12
 branches:
   only:
   - master
 script:
-  - yarn build
+  - npm run build

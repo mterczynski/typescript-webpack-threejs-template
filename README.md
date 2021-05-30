@@ -4,17 +4,17 @@
 
 ## Installing dependencies
 
-    yarn
+    npm i
 
 ## Running the project in watch mode
 
-    yarn start
+    npm start
 
 ## Building the project
 
-    yarn build
+    npm run build
 
 ## Linting the code
 
-    yarn lint
+    npm run lint
 
