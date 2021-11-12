@@ -5,6 +5,10 @@ module.exports = {
   entry: './src/main.ts',
   devServer: {
     port: 9000,
+    static: {
+      serveIndex: true,
+      directory: __dirname
+    }
   },
   output: {
     filename: 'bundle.js',
