@@ -1,6 +1,6 @@
 # TypeScript + Webpack + Three.js template
 
-Minimalistic template for three.js projects 
+A minimalistic template for three.js projects 
 
 [![Build Status](https://travis-ci.org/mterczynski/typescript-webpack-threejs-template.svg?branch=master)](https://travis-ci.org/mterczynski/typescript-webpack-threejs-template)
 
