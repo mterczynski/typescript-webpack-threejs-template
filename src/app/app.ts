@@ -1,7 +1,8 @@
-import { Color, PerspectiveCamera, Scene, Vector3, WebGLRenderer } from 'three';
+import { Color, PerspectiveCamera, Scene, Vector3, WebGLRenderer, Clock } from 'three';
 import { Brick } from './brick';
 
 export class App {
+  private readonly timer = new Clock();
   private readonly scene = new Scene();
   private readonly camera = new PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 10000);
   private readonly renderer = new WebGLRenderer({
@@ -31,10 +32,11 @@ export class App {
   }
 
   private render() {
+    const delta = this.timer.getDelta();
+
     this.renderer.render(this.scene, this.camera);
     requestAnimationFrame(() => this.render());
-
     this.adjustCanvasSize();
-    this.brick.rotateY(0.03);
+    this.brick.rotateY(3 * delta);
   }
 }
