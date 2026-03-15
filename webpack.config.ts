@@ -1,27 +1,34 @@
-import * as path from "path";
-import { fileURLToPath } from "url";
+import path from "path";
+import type { Configuration } from "webpack";
+import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+interface WebpackConfiguration extends Configuration {
+  devServer?: DevServerConfiguration;
+}
 
-export default {
+const config: WebpackConfiguration = {
   mode: "development",
+
   entry: "./src/main.ts",
+
   devServer: {
     port: 9000,
     static: {
-      serveIndex: true,
       directory: __dirname,
+      serveIndex: true,
     },
   },
+
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/dist/",
   },
+
   resolve: {
     extensions: [".ts", ".js"],
   },
+
   module: {
     rules: [
       {
@@ -31,7 +38,6 @@ export default {
       },
     ],
   },
-  watchOptions: {
-    ignored: /node_modules/,
-  },
 };
+
+export default config;

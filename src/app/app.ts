@@ -1,22 +1,23 @@
 import {
-  Color,
   PerspectiveCamera,
   Scene,
   Vector3,
   WebGLRenderer,
-  Clock,
+  Timer,
 } from "three";
 import { Brick } from "./brick";
 
 export class App {
-  private readonly timer = new Clock();
+  private readonly timer = new Timer();
   private readonly scene = new Scene();
+
   private readonly camera = new PerspectiveCamera(
     45,
-    innerWidth / innerHeight,
+    window.innerWidth / window.innerHeight,
     0.1,
-    10000,
+    10000
   );
+
   private readonly renderer = new WebGLRenderer({
     antialias: true,
     canvas: document.getElementById("main-canvas") as HTMLCanvasElement,
@@ -25,30 +26,36 @@ export class App {
   private brick: Brick;
 
   constructor() {
-    this.brick = new Brick(100, new Color("rgb(255,0,0)"));
+    this.brick = new Brick (100, "red");
     this.scene.add(this.brick);
 
     this.camera.position.set(200, 200, 200);
     this.camera.lookAt(new Vector3(0, 0, 0));
 
-    this.renderer.setSize(innerWidth, innerHeight);
-    this.renderer.setClearColor(new Color("rgb(0,0,0)"));
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setPixelRatio(window.devicePixelRatio);
+    this.renderer.setClearColor("black");
 
-    this.render();
+    window.addEventListener("resize", () => this.adjustCanvasSize());
+
+    this.renderer.setAnimationLoop(this.animate);
   }
 
   private adjustCanvasSize() {
-    this.renderer.setSize(innerWidth, innerHeight);
-    this.camera.aspect = innerWidth / innerHeight;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    this.renderer.setSize(width, height);
+    this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
   }
 
-  private render() {
+  private animate = () => {
+    this.timer.update();
     const delta = this.timer.getDelta();
 
-    this.renderer.render(this.scene, this.camera);
-    requestAnimationFrame(() => this.render());
-    this.adjustCanvasSize();
     this.brick.rotateY(3 * delta);
-  }
+
+    this.renderer.render(this.scene, this.camera);
+  };
 }
