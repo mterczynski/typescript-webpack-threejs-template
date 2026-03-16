@@ -1,7 +1,5 @@
 # TypeScript + Webpack + Three.js template
 
-[![CI](actions/workflows/ci.yml/badge.svg)](actions/workflows/ci.yml)
-
 A minimalistic template for Three.js projects
 
 ## Installing dependencies
