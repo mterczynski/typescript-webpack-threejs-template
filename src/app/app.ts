@@ -1,10 +1,4 @@
-import {
-  PerspectiveCamera,
-  Scene,
-  Vector3,
-  WebGLRenderer,
-  Timer,
-} from "three";
+import { PerspectiveCamera, Scene, Vector3, WebGLRenderer, Timer } from "three";
 import { Brick } from "./brick";
 
 export class App {
@@ -15,7 +9,7 @@ export class App {
     45,
     window.innerWidth / window.innerHeight,
     0.1,
-    10000
+    10000,
   );
 
   private readonly renderer = new WebGLRenderer({
@@ -26,7 +20,7 @@ export class App {
   private brick: Brick;
 
   constructor() {
-    this.brick = new Brick (100, "red");
+    this.brick = new Brick(100, "red");
     this.scene.add(this.brick);
 
     this.camera.position.set(200, 200, 200);
